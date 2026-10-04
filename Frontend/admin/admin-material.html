@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Study Material - Engineering Help</title>
+
+    <link rel="stylesheet" href="admin-material.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         NAVBAR
+    =============================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🎓 Engineering Help
+        </div>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../study-material/study-material.html">
+                Study Material
+            </a>
+            <a href="../profile.html">
+                Profile
+            </a>
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN
+    =============================== -->
+
+    <main class="admin-container">
+
+        <section class="upload-card">
+
+            <div class="upload-header">
+
+                <span class="admin-badge">
+                    ADMIN
+                </span>
+
+                <h1>
+                    Upload Study Material
+                </h1>
+
+                <p>
+                    Upload notes, PYQs and other study
+                    materials for students.
+                </p>
+
+            </div>
+
+
+            <!-- ==============================
+                 UPLOAD FORM
+            =============================== -->
+
+            <form
+                id="materialUploadForm"
+                enctype="multipart/form-data"
+            >
+
+                <!-- TITLE -->
+
+                <div class="form-group">
+
+                    <label for="title">
+                        Material Title
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="Example: DBMS Complete Notes"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="4"
+                        placeholder="Enter a short description..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- SUBJECT -->
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                        <span>*</span>
+                    </label>
+
+                    <select
+                        id="subject"
+                        name="subject"
+                        required
+                    >
+
+                        <option value="">
+                            Select Subject
+                        </option>
+
+                        <option value="C">
+                            C
+                        </option>
+
+                        <option value="C++">
+                            C++
+                        </option>
+
+                        <option value="Java">
+                            Java
+                        </option>
+
+                        <option value="Python">
+                            Python
+                        </option>
+
+                        <option value="JavaScript">
+                            JavaScript
+                        </option>
+
+                        <option value="HTML">
+                            HTML
+                        </option>
+
+                        <option value="CSS">
+                            CSS
+                        </option>
+
+                        <option value="DBMS">
+                            DBMS
+                        </option>
+
+                        <option value="Computer Networks">
+                            Computer Networks
+                        </option>
+
+                        <option value="DSA">
+                            DSA
+                        </option>
+
+                        <option value="Operating System">
+                            Operating System
+                        </option>
+
+                        <option value="COA">
+                            COA
+                        </option>
+
+                        <option value="Compiler Design">
+                            Compiler Design
+                        </option>
+
+                        <option value="FLAT">
+                            FLAT
+                        </option>
+
+                        <option value="Digital Electronics">
+                            Digital Electronics
+                        </option>
+
+                        <option value="Engineering Mathematics 1">
+                            Engineering Mathematics 1
+                        </option>
+
+                        <option value="Engineering Mathematics 2">
+                            Engineering Mathematics 2
+                        </option>
+
+                        <option value="Discrete Mathematics">
+                            Discrete Mathematics
+                        </option>
+
+                        <option value="Physics">
+                            Physics
+                        </option>
+
+                        <option value="Chemistry">
+                            Chemistry
+                        </option>
+
+                        <option value="English">
+                            English
+                        </option>
+
+                        <option value="LeetCode Problems">
+                            LeetCode Problems
+                        </option>
+
+                        <option value="GATE PYQs">
+                            GATE PYQs
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TYPE -->
+
+                <div class="form-group">
+
+                    <label for="type">
+                        Material Type
+                        <span>*</span>
+                    </label>
+
+                    <select
+                        id="type"
+                        name="type"
+                        required
+                    >
+
+                        <option value="">
+                            Select Type
+                        </option>
+
+                        <option value="Notes">
+                            Notes
+                        </option>
+
+                        <option value="PYQ">
+                            PYQ
+                        </option>
+
+                        <option value="Study Material">
+                            Study Material
+                        </option>
+
+                        <option value="Practice">
+                            Practice
+                        </option>
+
+                        <option value="Assignment">
+                            Assignment
+                        </option>
+
+                        <option value="Question Bank">
+                            Question Bank
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- FILE -->
+
+                <div class="form-group">
+
+                    <label for="file">
+                        Study Material File
+                        <span>*</span>
+                    </label>
+
+                    <input
+                        type="file"
+                        id="file"
+                        name="file"
+                        accept=".pdf,application/pdf"
+                        required
+                    >
+
+                    <small>
+                        Select a PDF file.
+                    </small>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="uploadMessage"
+                    class="upload-message"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    id="uploadButton"
+                    class="upload-button"
+                >
+                    Upload Material
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin-material.js"></script>
+
+</body>
+
+</html>
