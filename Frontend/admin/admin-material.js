@@ -1,5 +1,3 @@
-
-
 // =========================================================
 // ADMIN STUDY MATERIAL UPLOAD
 // =========================================================
@@ -7,7 +5,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const API_URL =
-        "http://localhost:3000/api/v1/materials";
+        "https://engineering-help.onrender.com/api/v1/materials";
 
 
     // =====================================================
