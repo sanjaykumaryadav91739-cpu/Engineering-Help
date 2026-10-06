@@ -861,7 +861,7 @@ if (signupForm) {
 
         try {
             const response = await fetch(
-                "http://localhost:3000/api/v1/users",
+                "https://engineering-help.onrender.com/api/v1/users",
                 {
                     method: "POST",
                     headers: {
@@ -905,7 +905,7 @@ console.log(
 async function connectBackend() {
     try {
         const response = await fetch(
-            "http://localhost:3000/api/v1/health"
+            "https://engineering-help.onrender.com/api/v1/health"
         );
 
         const data = await response.json();
