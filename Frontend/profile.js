@@ -1,4 +1,3 @@
-
 const userData = localStorage.getItem("user");
 
 if (!userData) {
@@ -181,7 +180,7 @@ if (!userData) {
         try {
 
             const response = await fetch(
-                `http://localhost:3000/api/v1/users/${user._id}/profile-image`,
+                `https://engineering-help.onrender.com/api/v1/users/${user._id}/profile-image`,
                 {
                     method: "POST",
                     body: formData
@@ -256,7 +255,7 @@ if (!userData) {
     document.getElementById("logoutBtn").addEventListener("click", () => {
 
         localStorage.removeItem("user");
-        
+        localStorage.removeItem("token");
 
         window.location.href = "login.html";
 
@@ -300,12 +299,13 @@ if (!userData) {
         try {
 
             const response = await fetch(
-                `http://localhost:3000/api/v1/users/${user._id}/profile`,
+                `https://engineering-help.onrender.com/api/v1/users/${user._id}/profile`,
                 {
                     method: "PUT",
 
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${localStorage.getItem("token")}`
                     },
 
                     body: JSON.stringify({
@@ -375,4 +375,3 @@ if (!userData) {
     });
 
 }
-
