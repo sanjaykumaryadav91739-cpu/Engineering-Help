@@ -5,7 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const API_URL = "http://localhost:3000/api/v1/materials";
+    const API_URL = "https://engineering-help.onrender.com/api/v1/materials";
 
     const searchInput =
         document.getElementById("materialSearch");
