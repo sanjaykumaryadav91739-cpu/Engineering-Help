@@ -1,10 +1,14 @@
+
 import express from "express";
 import cors from "cors";
+
 import userRoutes from "./routes/userRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import authMiddleware from "./middleware/authMiddleware.js";
-import adminMiddleware from "./middleware/adminMiddleware.js";
 import studyMaterialRoutes from "./routes/studyMaterialRoutes.js";
+
+import chatRoutes from "./routes/chatRoutes.js";
+import messageRoutes from "./routes/messageRoutes.js";
 
 const app = express();
 
@@ -18,6 +22,7 @@ app.use(
 
 app.use(express.json());
 
+// Health check
 app.get("/api/v1/health", (req, res) => {
     res.status(200).json({
         success: true,
@@ -25,10 +30,10 @@ app.get("/api/v1/health", (req, res) => {
     });
 });
 
-//User routes
-
+// User routes
 app.use("/api/v1/users", userRoutes);
 
+// Root route
 app.get("/", (req, res) => {
     res.status(200).json({
         success: true,
@@ -36,8 +41,9 @@ app.get("/", (req, res) => {
     });
 });
 
-// Auth routes
+// Authentication routes
 app.use("/api/v1/auth", authRoutes);
+
 app.get("/api/v1/auth/me", authMiddleware, (req, res) => {
     res.status(200).json({
         success: true,
@@ -46,13 +52,13 @@ app.get("/api/v1/auth/me", authMiddleware, (req, res) => {
     });
 });
 
+// Study material routes
+app.use("/api/v1/materials", studyMaterialRoutes);
 
+// Chat routes
+app.use("/api/v1/chats", authMiddleware, chatRoutes);
 
-
-
-app.use(
-    "/api/v1/materials",
-    studyMaterialRoutes
-);
+// Message routes
+app.use("/api/v1/messages", authMiddleware, messageRoutes);
 
 export default app;

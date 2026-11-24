@@ -1,71 +1,42 @@
+
 import mongoose from "mongoose";
 
-const materialSchema = new mongoose.Schema(
+const messageSchema = new mongoose.Schema(
     {
-        title: {
-            type: String,
+        chatId: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Chat",
             required: true,
-            trim: true,
+            index: true
         },
 
-        description: {
-            type: String,
-            trim: true,
-            default: "",
-        },
-
-        subject: {
-            type: String,
-            required: true,
-            trim: true,
-        },
-
-        type: {
-            type: String,
-            required: true,
-            enum: [
-                "Notes",
-                "PYQ",
-                "Study Material",
-                "Practice",
-                "Assignment",
-                "Question Bank",
-            ],
-        },
-
-        fileUrl: {
-            type: String,
-            required: true,
-        },
-
-        publicId: {
-            type: String,
-            required: true,
-        },
-
-        uploadedBy: {
+        sender: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User",
-            required: true,
+            required: true
         },
+
+        text: {
+            type: String,
+            required: true,
+            trim: true,
+            maxlength: 5000
+        },
+
+        readBy: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "User"
+            }
+        ]
     },
     {
-        timestamps: true,
+        timestamps: true
     }
 );
 
-materialSchema.index({
-    subject: 1,
-    type: 1,
-});
+messageSchema.index({ chatId: 1, createdAt: 1 });
 
-materialSchema.index({
-    createdAt: -1,
-});
+const Message = mongoose.model("Message", messageSchema);
 
-const Material = mongoose.model(
-    "Material",
-    materialSchema
-);
-
-export default Material;
+export default Message;
