@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile - Engineering Help</title>
+
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+    <div class="profile-page">
+
+        <div class="profile-card">
+
+            <h1>My Profile</h1>
+
+            <!-- Profile Picture -->
+            <div class="profile-image-section">
+
+                <div class="profile-image-container">
+
+                    <img
+                        id="profileImage"
+                        src=""
+                        alt="Profile Picture"
+                    >
+
+                    <div
+                        id="profileInitial"
+                        class="profile-initial"
+                    >
+                    </div>
+
+                </div>
+
+                <input
+                    type="file"
+                    id="profileImageInput"
+                    accept="image/*"
+                    hidden
+                >
+
+                <button
+                    id="changeProfileImageBtn"
+                    type="button"
+                >
+                    Change Profile Picture
+                </button>
+
+                <button
+                    id="uploadProfileImageBtn"
+                    type="button"
+                    style="display: none;"
+                >
+                    Upload Picture
+                </button>
+
+                <p
+                    id="imageMessage"
+                    class="image-message"
+                ></p>
+
+            </div>
+
+
+            <div class="profile-details">
+
+                <div class="profile-field">
+                    <label>Name</label>
+                    <p id="profileName">Loading...</p>
+                </div>
+
+                <div class="profile-field">
+                    <label>Email</label>
+                    <p id="profileEmail">Loading...</p>
+                </div>
+
+                <div class="profile-field">
+                    <label>Phone</label>
+                    <p id="profilePhone">Not added</p>
+                </div>
+
+                <div class="profile-field">
+                    <label>Address</label>
+                    <p id="profileAddress">Not added</p>
+                </div>
+
+            </div>
+
+
+            <div class="profile-actions">
+
+                <button id="editProfileBtn" type="button">
+                    Edit Profile
+                </button>
+
+                <button id="logoutBtn" type="button">
+                    Logout
+                </button>
+
+            </div>
+
+
+            <div class="edit-profile-form" id="editProfileForm">
+
+                <div class="profile-field">
+
+                    <label for="editPhone">
+                        Phone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="editPhone"
+                        placeholder="Enter phone number"
+                    >
+
+                </div>
+
+
+                <div class="profile-field">
+
+                    <label for="editAddress">
+                        Address
+                    </label>
+
+                    <textarea
+                        id="editAddress"
+                        placeholder="Enter your address"
+                        rows="3"
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    id="saveProfileBtn"
+                    type="button"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="profile.js"></script>
+
+</body>
+
+</html>
+

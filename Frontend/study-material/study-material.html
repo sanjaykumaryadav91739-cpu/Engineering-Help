@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Study Material - Engineering Help
+    </title>
+
+
+    <!-- ================= GOOGLE FONT ================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ================= FONT AWESOME ================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- ================= STUDY MATERIAL CSS ================= -->
+
+    <link
+        rel="stylesheet"
+        href="study-material.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         NAVBAR
+    ================================================== -->
+
+    <header class="navbar">
+
+
+        <!-- ================= LOGO ================= -->
+
+        <a
+            href="../index.html"
+            class="logo"
+        >
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <span>
+                Engineering Help
+            </span>
+
+        </a>
+
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../index.html#study">
+                Study
+            </a>
+
+            <a href="../index.html#pyq">
+                PYQ
+            </a>
+
+            <a href="../index.html#community">
+                Community
+            </a>
+
+            <a href="../index.html#chat">
+                Chat
+            </a>
+
+        </nav>
+
+
+        <!-- ================= NAV ACTIONS ================= -->
+
+        <div class="nav-actions">
+
+
+            <!-- Notification -->
+
+            <button
+                class="notification-btn"
+                id="notificationBtn"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i class="fa-regular fa-bell"></i>
+
+            </button>
+
+
+            <!-- Profile -->
+
+            <a
+                href="../profile.html"
+                class="profile-btn"
+                aria-label="Open profile"
+            >
+
+                <span
+                    class="profile-icon"
+                    id="navbarProfile"
+                >
+
+
+                    <!-- Default user icon -->
+
+                    <i
+                        class="fa-regular fa-user"
+                        id="defaultProfileIcon"
+                    ></i>
+
+
+                    <!-- Profile image -->
+
+                    <img
+                        id="navbarProfileImage"
+                        src=""
+                        alt="Profile"
+                    >
+
+
+                    <!-- Profile initial -->
+
+                    <span
+                        id="navbarProfileInitial"
+                    ></span>
+
+
+                </span>
+
+
+                <span>
+                    Profile
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         MAIN
+    ================================================== -->
+
+    <main>
+
+
+        <!-- ==================================================
+             HERO
+        ================================================== -->
+
+        <section class="material-hero">
+
+            <div class="hero-content">
+
+                <p class="section-label">
+                    ENGINEERING RESOURCES
+                </p>
+
+                <h1>
+                    Study Material
+                </h1>
+
+                <p>
+                    Notes, study materials, programming resources,
+                    engineering subjects and GATE preparation
+                    — all in one place.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             STUDY MATERIAL SECTION
+        ================================================== -->
+
+        <section class="material-section">
+
+
+            <!-- Section heading -->
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        LEARNING
+                    </p>
+
+                    <h2>
+                        Explore Study Material
+                    </h2>
+
+                    <p>
+                        Select a subject and find the resources
+                        you need for your preparation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 SEARCH & FILTER
+            ================================================== -->
+
+            <div class="material-controls">
+
+
+                <!-- Search -->
+
+                <div class="search-box">
+
+                    <i
+                        class="fa-solid fa-magnifying-glass"
+                    ></i>
+
+                    <input
+                        type="search"
+                        id="materialSearch"
+                        placeholder="Search subject or material..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- Category -->
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="programming">
+                        Programming
+                    </option>
+
+                    <option value="web">
+                        Web Development
+                    </option>
+
+                    <option value="core">
+                        Core Computer Science
+                    </option>
+
+                    <option value="mathematics">
+                        Mathematics
+                    </option>
+
+                    <option value="science">
+                        Science & Humanities
+                    </option>
+
+                    <option value="practice">
+                        Practice
+                    </option>
+
+                    <option value="competitive">
+                        Competitive Exams
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 SUBJECT GRID
+            ================================================== -->
+
+            <div
+                class="subject-grid"
+                id="subjectContainer"
+            >
+
+
+                <!-- ================= PROGRAMMING ================= -->
+
+
+                <!-- C -->
+
+                <article
+                    class="subject-card"
+                    data-category="programming"
+                    data-subject="C"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-c"></i>
+
+                    </div>
+
+                    <h3>
+                        C
+                    </h3>
+
+                    <p>
+                        C programming notes, concepts
+                        and practice resources.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- C++ -->
+
+                <article
+                    class="subject-card"
+                    data-category="programming"
+                    data-subject="C++"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+                    <h3>
+                        C++
+                    </h3>
+
+                    <p>
+                        C++ programming, STL, OOP
+                        and problem solving.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Java -->
+
+                <article
+                    class="subject-card"
+                    data-category="programming"
+                    data-subject="Java"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-brands fa-java"></i>
+
+                    </div>
+
+                    <h3>
+                        Java
+                    </h3>
+
+                    <p>
+                        Java programming, OOP and
+                        development resources.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Python -->
+
+                <article
+                    class="subject-card"
+                    data-category="programming"
+                    data-subject="Python"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-brands fa-python"></i>
+
+                    </div>
+
+                    <h3>
+                        Python
+                    </h3>
+
+                    <p>
+                        Python programming and
+                        development resources.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- JavaScript -->
+
+                <article
+                    class="subject-card"
+                    data-category="programming"
+                    data-subject="JavaScript"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-brands fa-js"></i>
+
+                    </div>
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        JavaScript concepts and
+                        web development resources.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+
+                <!-- ================= WEB DEVELOPMENT ================= -->
+
+
+                <!-- HTML -->
+
+                <article
+                    class="subject-card"
+                    data-category="web"
+                    data-subject="HTML"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-brands fa-html5"></i>
+
+                    </div>
+
+                    <h3>
+                        HTML
+                    </h3>
+
+                    <p>
+                        HTML concepts and
+                        web structure resources.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- CSS -->
+
+                <article
+                    class="subject-card"
+                    data-category="web"
+                    data-subject="CSS"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-brands fa-css3-alt"></i>
+
+                    </div>
+
+                    <h3>
+                        CSS
+                    </h3>
+
+                    <p>
+                        CSS concepts, layouts,
+                        responsive design and UI.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+
+                <!-- ================= CORE COMPUTER SCIENCE ================= -->
+
+
+                <!-- DBMS -->
+
+                <article
+                    class="subject-card"
+                    data-category="core"
+                    data-subject="DBMS"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-database"></i>
+
+                    </div>
+
+                    <h3>
+                        DBMS
+                    </h3>
+
+                    <p>
+                        Database concepts, SQL,
+                        normalization and transactions.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Computer Networks -->
+
+                <article
+                    class="subject-card"
+                    data-category="core"
+                    data-subject="Computer Networks"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-network-wired"></i>
+
+                    </div>
+
+                    <h3>
+                        Computer Networks
+                    </h3>
+
+                    <p>
+                        Networking concepts,
+                        protocols and communication.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- DSA -->
+
+                <article
+                    class="subject-card"
+                    data-category="core"
+                    data-subject="DSA"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-diagram-project"></i>
+
+                    </div>
+
+                    <h3>
+                        DSA
+                    </h3>
+
+                    <p>
+                        Data structures, algorithms
+                        and problem solving.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Operating System -->
+
+                <article
+                    class="subject-card"
+                    data-category="core"
+                    data-subject="Operating System"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-microchip"></i>
+
+                    </div>
+
+                    <h3>
+                        Operating System
+                    </h3>
+
+                    <p>
+                        Processes, memory, scheduling
+                        and OS concepts.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- COA -->
+
+                <article
+                    class="subject-card"
+                    data-category="core"
+                    data-subject="COA"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-computer"></i>
+
+                    </div>
+
+                    <h3>
+                        COA
+                    </h3>
+
+                    <p>
+                        Computer organization,
+                        architecture and hardware.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Compiler Design -->
+
+                <article
+                    class="subject-card"
+                    data-category="core"
+                    data-subject="Compiler Design"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-gears"></i>
+
+                    </div>
+
+                    <h3>
+                        Compiler Design
+                    </h3>
+
+                    <p>
+                        Compiler phases, parsing,
+                        lexical analysis and optimization.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- FLAT -->
+
+                <article
+                    class="subject-card"
+                    data-category="core"
+                    data-subject="FLAT"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-code-branch"></i>
+
+                    </div>
+
+                    <h3>
+                        FLAT
+                    </h3>
+
+                    <p>
+                        Formal languages, automata,
+                        grammars and computation theory.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Digital Electronics -->
+
+                <article
+                    class="subject-card"
+                    data-category="core"
+                    data-subject="Digital Electronics"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-microchip"></i>
+
+                    </div>
+
+                    <h3>
+                        Digital Electronics
+                    </h3>
+
+                    <p>
+                        Digital logic, gates,
+                        circuits and electronics.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+
+                <!-- ================= MATHEMATICS ================= -->
+
+
+                <!-- Engineering Mathematics 1 -->
+
+                <article
+                    class="subject-card"
+                    data-category="mathematics"
+                    data-subject="Engineering Mathematics 1"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-calculator"></i>
+
+                    </div>
+
+                    <h3>
+                        Engineering Mathematics 1
+                    </h3>
+
+                    <p>
+                        Mathematics concepts and
+                        engineering problem solving.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Engineering Mathematics 2 -->
+
+                <article
+                    class="subject-card"
+                    data-category="mathematics"
+                    data-subject="Engineering Mathematics 2"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-square-root-variable"></i>
+
+                    </div>
+
+                    <h3>
+                        Engineering Mathematics 2
+                    </h3>
+
+                    <p>
+                        Advanced engineering mathematics
+                        and problem solving.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Discrete Mathematics -->
+
+                <article
+                    class="subject-card"
+                    data-category="mathematics"
+                    data-subject="Discrete Mathematics"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-calculator"></i>
+
+                    </div>
+
+                    <h3>
+                        Discrete Mathematics
+                    </h3>
+
+                    <p>
+                        Logic, sets, relations,
+                        graphs and combinatorics.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+
+                <!-- ================= SCIENCE & HUMANITIES ================= -->
+
+
+                <!-- Physics -->
+
+                <article
+                    class="subject-card"
+                    data-category="science"
+                    data-subject="Physics"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-atom"></i>
+
+                    </div>
+
+                    <h3>
+                        Physics
+                    </h3>
+
+                    <p>
+                        Engineering physics notes
+                        and study resources.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Chemistry -->
+
+                <article
+                    class="subject-card"
+                    data-category="science"
+                    data-subject="Chemistry"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-flask"></i>
+
+                    </div>
+
+                    <h3>
+                        Chemistry
+                    </h3>
+
+                    <p>
+                        Engineering chemistry notes
+                        and important concepts.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- English -->
+
+                <article
+                    class="subject-card"
+                    data-category="science"
+                    data-subject="English"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-language"></i>
+
+                    </div>
+
+                    <h3>
+                        English
+                    </h3>
+
+                    <p>
+                        Communication skills,
+                        grammar and English resources.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+
+                <!-- ================= PRACTICE ================= -->
+
+
+                <!-- LeetCode -->
+
+                <article
+                    class="subject-card"
+                    data-category="practice"
+                    data-subject="LeetCode Problems"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </div>
+
+                    <h3>
+                        LeetCode Problems
+                    </h3>
+
+                    <p>
+                        Coding problems and
+                        interview preparation resources.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Practice
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+
+                <!-- ================= COMPETITIVE EXAMS ================= -->
+
+
+                <!-- GATE PYQs -->
+
+                <article
+                    class="subject-card"
+                    data-category="competitive"
+                    data-subject="GATE PYQs"
+                >
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-file-circle-question"></i>
+
+                    </div>
+
+                    <h3>
+                        GATE PYQs
+                    </h3>
+
+                    <p>
+                        Previous year GATE questions
+                        for exam preparation.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="subject-btn"
+                    >
+                        Practice
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 NO RESULT
+            ================================================== -->
+
+            <div
+                id="noMaterialMessage"
+                class="no-material"
+                hidden
+            >
+
+                <i
+                    class="fa-solid fa-magnifying-glass"
+                ></i>
+
+                <h3>
+                    No material found
+                </h3>
+
+                <p>
+                    Try another subject or search keyword.
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <!-- Authentication -->
+
+    <script src="../js/auth/auth.js"></script>
+
+
+    <!-- Navbar / Profile -->
+
+    <script src="../js/common/navbar.js"></script>
+
+
+    <!-- Study Material -->
+
+    <script src="study-material.js"></script>
+
+
+</body>
+
+</html>

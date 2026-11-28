@@ -1,0 +1,194 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+}
+
+.profile-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.profile-card h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   Profile Image
+   ============================== */
+
+.profile-image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-image-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+#profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.profile-initial {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+#changeProfileImageBtn,
+#uploadProfileImageBtn {
+    width: 100%;
+    max-width: 220px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#changeProfileImageBtn {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+#uploadProfileImageBtn {
+    margin-top: 10px;
+    background: #2563eb;
+    color: white;
+}
+
+#changeProfileImageBtn:hover {
+    background: #cbd5e1;
+}
+
+#uploadProfileImageBtn:hover {
+    background: #1d4ed8;
+}
+
+#uploadProfileImageBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.image-message {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #64748b;
+    text-align: center;
+}
+
+
+/* ==============================
+   Existing Profile Fields
+   ============================== */
+
+.profile-field {
+    margin-bottom: 20px;
+}
+
+.profile-field label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.profile-field p {
+    padding: 12px;
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.profile-actions button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#editProfileBtn {
+    background: #2563eb;
+    color: white;
+}
+
+#logoutBtn {
+    background: #ef4444;
+    color: white;
+}
+
+.edit-profile-form {
+    display: none;
+    margin-top: 25px;
+}
+
+.edit-profile-form input,
+.edit-profile-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+
+.edit-profile-form input:focus,
+.edit-profile-form textarea:focus {
+    border-color: #2563eb;
+}
+
+#saveProfileBtn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
